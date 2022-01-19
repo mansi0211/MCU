@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\sinewave.obj" 
+TO ".\Objects\sinewave" 
+PRINT(".\Listings\sinewave.m51") RAMSIZE(256) 

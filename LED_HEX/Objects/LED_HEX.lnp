@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\LED_HEX.obj" 
+TO ".\Objects\LED_HEX" 
+PRINT(".\Listings\LED_HEX.m51") RAMSIZE(256) 

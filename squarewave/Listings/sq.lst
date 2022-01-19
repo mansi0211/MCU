@@ -1,0 +1,44 @@
+C51 COMPILER V9.60.0.0   SQ                                                                12/15/2021 15:11:49 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE SQ
+OBJECT MODULE PLACED IN .\Objects\sq.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE sq.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\sq.lst
+                    -) TABS(2) OBJECT(.\Objects\sq.obj)
+
+line level    source
+
+   1          #include <at89c51xd2.h>
+   2          void  my_delay()
+   3          {
+   4   1        int i;
+   5   1        for(i=0;i<10000;i++);
+   6   1      }
+   7          
+   8          void main ()
+   9          {
+  10   1        int sin_val[12] = (128,192,238,255,238,192,120,64,17,0,17,64);
+  11   1        P1 = 0X00; //CONVERT PORT P1 AS OUTPUT
+  12   1        while(1)
+  13   1        {
+  14   2          P1 = 0XFF; //TURN ON ALL 8 LEDS FROM P1
+  15   2          my_delay();
+  16   2          P1 = 0X00; //TURN OFF ALL 8 LED'S FROM P1
+  17   2          my_delay();
+  18   2        }
+  19   1      } 
+  20          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     51    ----
+   CONSTANT SIZE    =     24    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      24
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
